@@ -25,7 +25,7 @@ const SignUpForm = () => {
     
 
     try {
-      const response = await fetch('https://accerian-backend.onrender.com/signup', {
+      const response = await fetch('https://lkn.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

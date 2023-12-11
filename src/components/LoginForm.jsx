@@ -37,7 +37,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://accerian-backend.onrender.com/login', {
+      const response = await fetch('https://lkn.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
