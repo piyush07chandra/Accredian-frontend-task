@@ -53,7 +53,7 @@ const LoginForm = () => {
 
       }
       else{
-        alert('invalid username or password')
+        alert('error')
       }
     } catch (error) {
       console.error('Error:', error);

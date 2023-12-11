@@ -40,7 +40,7 @@ if(!validateForm()){
         alert('Signup successful');
       } 
       else{
-        alert('use a different email')
+        alert('error')
       }
       
     } catch (errors) {
