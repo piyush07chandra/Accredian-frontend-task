@@ -37,7 +37,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://lkn.onrender.com/login', {
+      const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,6 +51,9 @@ const LoginForm = () => {
       else if (response.ok) {
         alert('Login successful');
 
+      }
+      else{
+        alert('invalid username or password')
       }
     } catch (error) {
       console.error('Error:', error);
