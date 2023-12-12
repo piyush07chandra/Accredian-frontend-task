@@ -25,7 +25,7 @@ const SignUpForm = () => {
     
 
     try {
-      const response = await fetch('https://fg-qlk6.onrender.com/signup', {
+      const response = await fetch('https://bh-tz7s.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,11 +36,12 @@ const SignUpForm = () => {
 if(!validateForm()){
     alert('insert  value')
 }
-      else if (response.ok ) {
-        alert('Signup successful');
-      } 
-      else{
-        alert('error')
+      else if (response.ok) {
+        const message = await response.text();
+        alert(message); 
+      } else {
+        const errorMessage = await response.text();
+        alert(errorMessage); 
       }
       
     } catch (errors) {

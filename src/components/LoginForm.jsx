@@ -37,7 +37,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://fg-qlk6.onrender.com/login', {
+      const response = await fetch('https://bh-tz7s.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,13 +48,13 @@ const LoginForm = () => {
       if (!validateForm()) {
         alert('insert value')
       }
-      else if (response.ok) {
-        alert('Login successful');
-
-      }
-      else{
-        alert('error')
-      }
+        else if (response.ok) {
+          const message = await response.text();
+          alert(message); 
+        } else {
+          const errorMessage = await response.text();
+          alert(errorMessage); 
+        }
     } catch (error) {
       console.error('Error:', error);
     }
